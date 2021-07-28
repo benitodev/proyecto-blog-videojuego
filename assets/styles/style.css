@@ -1,0 +1,419 @@
+
+:root{
+  --main-color: #e40a7e;
+  --main-family: "Tourney", cursive;
+}
+
+/* Basic resets*/
+html{
+    box-sizing: border-box;
+    font-size: 16;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('../img/backgrund-images.jpg');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: 20% 90%;
+   background-repeat: no-repeat;
+   
+   
+}
+
+main{
+  flex-grow: 2;
+}
+
+a{
+    color: rgb(76, 7, 133);
+    transition: color .3 ease;
+}
+
+a:hover{
+    color: rgb(118, 30, 190);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+*{
+  
+   text-decoration: none;
+    list-style: none;
+}
+/*****************  MENU ***************/
+
+
+/* nav lists  */
+#nav {
+ background-color: rgba(82, 18, 156, 0);
+   border-bottom: .5px solid rgba(255, 255, 255, 0.438);
+    
+
+  box-shadow: 5px 0 10px rgb(27, 26, 26);
+  height: 80px;
+  width: 100vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+/* That is "blog de videojuegos"*/
+#logo{
+  font-size: 3.2rem;
+ color: rgb(141, 57, 180);
+  text-shadow: 3px 1px 7px rgba(27, 26, 26, 0.657);
+ font-family: var(--main-family);
+    letter-spacing: 3.3px;
+  margin-left: 20px;  
+    
+}
+
+/*The #lists are ul(element html) */
+#lists{
+  display: flex;
+  justify-content: space-between;
+}
+
+#lists li {
+  margin:0px 15px 0px;
+}
+
+#lists li a {
+  padding: 7px 13px;
+  font-size: 1.1rem;
+  display: block;
+  font-weight: 800;
+  color: var(--main-color);
+  font-family: var(--main-family);
+  
+}
+
+#lists li:hover {
+  margin:0px 15px 0px;
+  background-color: rgb(0, 0, 0);
+  transition: background 1s;
+}
+
+#lists li a:hover {
+  color: #fff;
+  transition: color 1s;
+}
+
+
+
+
+/** titles!****/
+
+
+#title-main{
+font-family: var(--main-family);
+  font-size: 4rem;
+ text-align: center;
+
+  letter-spacing: 15px;
+ color: rgba(240, 238, 238, 0.931);
+  background-color: rgba(36, 30, 30, 0);
+}
+
+
+#title-box{
+  position: relative;
+  margin: 10vh 20%;
+  
+  background: linear-gradient(90deg, rgba(69, 14, 136, 0.219), #bfbfc367);
+}
+
+.box-animate::before, .box-animate::after{
+content: '';
+position: absolute;
+left: -8px;
+top: -8px;
+background: linear-gradient(120deg, #0e8b94, #8d01a0, #2d71b1, #f10a4f, #e6036d, #fb0094, #db8008, #14a9c3, #27d1d1,#00ffea);
+background-size: 300%;
+width: calc(100% + 16px);
+height: calc(100% + 16px);
+z-index: -1;
+animation: box-gradient 15s ease infinite;
+} 
+
+@keyframes box-gradient{
+  0%{
+background-position: 0% 200%;
+  }
+  50%{
+background-position: 200% 0%;
+  }
+  100%{
+background-position: 0% 330%;
+  }
+}
+
+#title {
+ font-family: var(--main-family);
+  font-size: 2.4rem;
+  color: rgba(192, 188, 197, 0.918);
+   background-color: rgba(24, 2, 2, 0.445);
+  text-align: center;
+    padding: 9px;
+
+}
+
+/*** text content****/
+
+.paragraph{
+font-family: "Tourney", cursive;
+  font-size: 25px;
+  text-align: left;
+  padding: 9px;
+   color: rgba(192, 188, 197, 0.918);
+   margin: 0px 20px;
+  background-color: rgba(24, 2, 2, 0.445);
+}
+/* inputs*/
+
+#inputs{
+ background-color: rgba(15, 4, 29, 0.568);
+  margin: 20px 15px;
+  height: 700px;
+  border-radius: 3%;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+@keyframes input-color {
+  0%{
+    background-color: rgba(235, 227, 232, 0.781);
+  }
+  50%{
+      background-color: rgba(235, 215, 232, 0.842);
+  }
+  100%{
+ background-color:  rgba(224, 220, 223, 0.877);
+  }
+}
+
+
+/***** Featured games ****/
+
+#featured-games{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  margin: 10px 50px;
+}
+
+/***** img-game *****/
+
+#img-game{
+  background-position: bottom;
+  width: 350px;
+  height: 350px;
+
+}
+
+/************ footer *************/
+#small-footer{
+  display: flex;
+  width: 100%;
+  margin: 10px 40px;
+
+}
+
+#small-footer i{
+  color: rgb(229, 226, 226);
+  font-size: 2rem;
+}
+
+/******* PAGE: contacto ******/
+/********** form **********/
+#form-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*  height: 50%;*/
+
+  width: 100%;
+}
+
+#form-login{
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 40px;
+   font-family: "Tourney", cursive;
+   font-size: 20px;
+  width: 40%; 
+}
+
+
+
+.login-class{
+ border: none;
+
+  display: block;
+  width: 30%;
+  height: 5vh;
+ background-color: rgba(209, 202, 216, 0.726);
+ outline: none;
+}
+
+
+.labels-class{
+   font-family: "Tourney", cursive;
+  font-size: 2rem;
+   color: rgb(25, 3, 29);
+   margin: 8px 0px;
+}
+
+.inputs-class{
+ border: none;
+font-size: 25px;
+  display: block;
+  width: 30%;
+  height: 5vh;
+ background-color: rgba(209, 202, 216, 0.726);
+ outline: none;
+}
+
+
+
+.inputs-class:hover{
+  background-color: rgba(221, 221, 221, 0.548);
+}
+
+.submit{
+  border: none;
+  font-family: "Tourney", cursive;
+  display: block;
+  width: 30%;
+  margin: 20px 0px;
+  height: 5vh;
+  font-size: 20px;
+  background-color: rgba(209, 202, 216, 0.726);
+}
+
+/******* div-errors register  *******/
+.error{
+   color: rgb(255, 255, 255);
+  background-color: rgba(187, 13, 13, 0.787);
+  text-align: center;
+  width:30%;
+  font-size: 20px;
+}
+
+.alert .error{
+  color: rgb(255, 255, 255);
+  background-color: rgba(187, 13, 13, 0.787);
+  text-align: center;
+  width:100%;
+  font-size: 20px;
+}
+
+/******* div-succes register *********/
+.alert{
+  display: flex;
+  justify-content: center;
+}
+
+.alert .success{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(9, 175, 17, 0.787);
+  text-align: center;
+  width:30%;
+  font-size: 20px;
+}
+/********* block-aside*********/
+
+.block-aside{
+  background-color: rgba(187, 187, 187, 0.623);
+  margin: 50px 150px;
+  display: flex;
+  height: 50vh;
+  flex-direction: row-reverse;
+  align-items: center;
+
+}
+
+
+
+/**** IMAGE:7-days*****/
+
+
+
+.box-login{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  margin: 4vh 0px;
+
+ 
+}
+
+.buttons-login{
+  color: rgba(82, 18, 156, 0.459);
+   font-size: 2.6rem;
+padding: 10px;
+  width: 30%;
+margin: 10px 8px;
+text-align: center;
+
+   font-family: "Tourney", cursive;
+  background-color: rgba(15, 4, 29, 0.856);
+ 
+
+   animation: color 3s infinite;
+}
+
+@keyframes color{
+
+  0%{
+      color: rgba(111, 35, 197, 0.747);
+  }
+
+  100%{
+     color: rgba(114, 32, 207, 0.966);
+  }
+}
+
+
+/***** Categories ********/
+.categories{
+  font-size: 20px;
+
+}
+/**** button to show totally entries ****/
+
+#show-entries{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/**** search game ****/
+
+#search-game{
+     background-color: rgba(187, 187, 187, 0.623);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
